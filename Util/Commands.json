@@ -1,0 +1,42 @@
+{
+    "Help": {
+        "name":"Help",
+        "group":"User",
+        "desc": "Displays a list if commands.",
+        "usage":"help [group OR command]"
+    },
+
+    "Weather": {
+        "name":"Weather",
+        "group":"User",
+        "desc": "Returns weather in channel.",
+        "usage":"weather <location>"
+    },
+
+    "Purge": {
+        "name":"Purge",
+        "group":"Moderator", 
+        "desc": "Clear a specified number of messages",
+        "usage":"purge <number>"
+    },
+
+    "Ping": {
+        "name":"Ping",
+        "group":"User",
+        "desc": "Displays the ping to the channel.",
+        "usage":"ping"
+    },
+
+    "Waifu": {
+        "name":"Waifu",
+        "group":"User",
+        "desc": "Mentions a user with a message and post a picture",
+        "usage":"waifu"
+    },
+    "Insult": {
+        "name":"Insult",
+        "group":"User",
+        "desc": "Mentions a user and insult them with a message",
+        "usage":"insult <@User>"
+    }
+}
