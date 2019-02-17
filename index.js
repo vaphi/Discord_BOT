@@ -6,7 +6,7 @@ const fs = require('fs');
 const random = require("random-js");
 
 
-bot.login('Mzg2MzQ5ODM3OTExNTg4ODY0.DQOn9g.3CZ2cpi4-hoO3Kdv8Glafy5_Zao');
+bot.login('Mzg2MzQ5ODM3OTExNTg4ODY0.DV58GQ.4qFID9D9o34XtilYUsbtwtSX5Vo');
 
 // Calling Files
 const Commands = JSON.parse(fs.readFileSync('Util/Commands.json', 'utf8'));
@@ -28,7 +28,8 @@ bot.on('message', (message) => {
     let args = cont.slice(1);
 
    if(msg === prefix + 'ping') {
-        message.reply('pong');
+    var DiscordPing = bot.ping;
+        message.reply(Math.round(DiscordPing) + ' ms');
    }
 
 ///////////////////////////////////////////////////PURGE COMMAND//////////////////////////////////////////////////////////////////
@@ -284,5 +285,80 @@ if (msg.startsWith(prefix + 'insult')){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////Pun Command/////////////////////////////////////////////////////////////////////
+if (msg.startsWith(prefix + 'dadjokes')){
+    
+    //array for insults
+    var DadJokesArray = [
+        "What time did the man go to the dentist? \n \n **Tooth hurt-y**", "What do you call a fake noodle? \n \n **An Impasta**", "What do you call chesse that isn't yours \n \n **Nacho Cheese**",
+        "This graveyard looks overcrowded \n \n **People must be dying in there**", "What do you call a fat psychic \n \n **A four-chin teller**",
+        "Why dont't crabs give to charity? \n \n **Because they're shellfish**", "Did you hear that Arnold Schwarzenegger will be doing a movie about classical music? \n \n **He'll be Bach**",
+        "I bought shoes from a drug dealer once? \n \n **I don't know what he laced them with, but I was tripping all day**", "Why did the duck cross the road? \n \n **To prove that he wasnn't a chicken**",
+
+    ]
+
+    async function dadjokes() {
+
+        message.delete(); //deletes command
+
+        var DadJokesIndex = Math.floor(Math.random() * DadJokesArray.length ); //randomize jokes
+
+        message.reply(DadJokesArray[DadJokesIndex])
+        }
+            dadjokes(); //call dadjokes function      
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////// Emoji Command/////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////  Table flip Command/////////////////////////////////////////////////////////
+if (msg.startsWith(prefix + 'tableflip')){
+    
+    async function tableflip() {
+        
+        message.delete(); //deletes command
+        
+        message.reply('**╯°□°）╯︵ ┻━┻**');
+    }
+
+    tableflip();
+
+}
+
+//////////////////////////////////////////////////  Table Unflip Command/////////////////////////////////////////////////////////////////
+if (msg.startsWith(prefix + 'unflip')){
+    
+    async function unflip() {
+        
+        message.delete(); //deletes command
+        
+        message.reply('**┬─┬ ノ( ゜-゜ノ)**');
+    }
+
+    unflip();
+
+}
+
+
+
+//////////////////////////////////////////////////  Table Unflip Command/////////////////////////////////////////////////////////////////
+if (msg.startsWith(prefix + 'shrug')){
+    
+    async function shrug() {
+        
+        message.delete(); //deletes command
+        
+        message.reply('**¯\_(ツ)_/¯**');
+    }
+
+    shrug();
+
+}
+
+
 });
 
