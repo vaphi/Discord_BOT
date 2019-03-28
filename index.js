@@ -6,7 +6,7 @@ const fs = require('fs');
 const random = require("random-js");
 
 
-bot.login('Mzg2MzQ5ODM3OTExNTg4ODY0.DV58GQ.4qFID9D9o34XtilYUsbtwtSX5Vo');
+bot.login('Token');
 
 // Calling Files
 const Commands = JSON.parse(fs.readFileSync('Util/Commands.json', 'utf8'));
@@ -255,15 +255,44 @@ if (msg.startsWith(prefix + 'waifu')){
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////MEME COMMAND////////////////////////////////////////////////////////////////////
+if (msg.startsWith(prefix + 'meme')){
+    //array for pictures
+    var memeArray = 
+    [
+        "meme/0.jpg", "meme/1.jpg", "meme/2.jpg", "meme/3.jpg", "meme/4.jpg",
+        "meme/5.jpg", "meme/6.jpg", "meme/7.jpg", "meme/8.jpg", "meme/9.jpg",
+        "meme/10.jpg", "meme/11.jpg", "meme/12.jpg", "meme/13.jpg", "meme/14.jpg",
+        "meme/15.jpg", "meme/16.jpg", "meme/17.jpg", "meme/18.jpg", "meme/19.jpg",
+        "meme/20.jpg", 
+
+    ]
+
+    //function for random number, use random number to display picture
+    async function meme() {
+        var memeIndex = Math.floor(Math.random() * memeArray.length );
+
+        //console out picture 
+        message.reply("",{
+            files: [
+                    memeArray[memeIndex]
+                  ]  
+             }, message.channel.send);
+    }
+
+    meme();
+
+}
 ///////////////////////////////////////////////////INSULT COMMAND//////////////////////////////////////////////////////////////////
 
 if (msg.startsWith(prefix + 'insult')){
     
     //array for insults
     var insultArray = [
-        "Your waifu is trash", "You must have been born on a highway because that's where most accidents happen", "Life is full of disappointments. Take you for example!", 
-        "thou art a flesh-monger, a fool and a coward" , "Go eat a bag of dicks", "You sir is a pussy bitch", "Hold on there, you fucktard anal flap... Did you just go full throttle twat waffle?!?" , 
-        "2D girls aren't real", "You're adopted", "Santa thinks you're gay", 
+        "You have an IQ of a monkey", "Even a sea monkey dress better than you", "The last time I saw something like you, I flushed it" ,
+        "thou art a fool and a coward", "You, sir, are an oxygen thief!", "why dont you go play in traffic" , "Hey, you have something on your chin...no, the 3rd one down",
+        "There is no vaccine against stupidity", "I do not engage In metal combat with the unarmed", "I'm jealous of all the people that have not met you!", 
+        "You're as useful as an ashtray on a motorcycle", 
     ]
 
     async function insult() {
@@ -342,8 +371,6 @@ if (msg.startsWith(prefix + 'unflip')){
     unflip();
 
 }
-
-
 
 //////////////////////////////////////////////////  Table Unflip Command/////////////////////////////////////////////////////////////////
 if (msg.startsWith(prefix + 'shrug')){

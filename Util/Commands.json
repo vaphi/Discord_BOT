@@ -30,7 +30,7 @@
     "Waifu": {
         "name":"Waifu",
         "group":"User",
-        "desc": "Mentions a user with a message and post a picture",
+        "desc": "Display a picture of a waifu",
         "usage":"waifu"
     },
     "Insult": {
@@ -38,5 +38,35 @@
         "group":"User",
         "desc": "Mentions a user and insult them with a message",
         "usage":"insult <@User>"
+    },
+    "Dadjokes": {
+        "name":"DadJokes",
+        "group":"User",
+        "desc": "Display a text message of a typical dad joke",
+        "usage":"dadjokes"
+    },
+    "TableFlip": {
+        "name":"TableFlip",
+        "group":"User",
+        "desc": "Display a text emoji of a table flipping",
+        "usage":"tableflip"
+    },
+    "UnFlip": {
+        "name":"TableUnFlip",
+        "group":"User",
+        "desc": "Dispaly a text emoji of a table being un-flipped",
+        "usage":"unflip"
+    },
+    "shrug": {
+        "name":"Shrug",
+        "group":"User",
+        "desc": "Display a text emoji of a shrug",
+        "usage":"shrug"
+    },
+    "meme": {
+        "name":"Meme",
+        "group":"User",
+        "desc": "Display a image of a meme",
+        "usage":"meme"
     }
 }
