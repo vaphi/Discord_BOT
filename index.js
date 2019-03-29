@@ -6,7 +6,7 @@ const fs = require('fs');
 const random = require("random-js");
 
 
-bot.login('Token');
+bot.login('Mzg2MzQ5ODM3OTExNTg4ODY0.D37CZQ.USCUc9YgM_5V8bEbKaVRlqlCYUg');
 
 // Calling Files
 const Commands = JSON.parse(fs.readFileSync('Util/Commands.json', 'utf8'));
