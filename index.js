@@ -386,6 +386,5 @@ if (msg.startsWith(prefix + 'shrug')){
 
 }
 
-
 });
 
